@@ -50,7 +50,7 @@ namespace RestWithASPNETUdemy.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
-            _personService.FindByID(id);
+            _personService.Delete(id);
             return NoContent();
         }
     }
