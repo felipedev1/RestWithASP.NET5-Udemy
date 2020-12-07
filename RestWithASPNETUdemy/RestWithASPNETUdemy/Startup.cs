@@ -7,7 +7,6 @@ using Microsoft.Extensions.Hosting;
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementations;
-using RestWithASPNETUdemy.Repository.Implementations;
 using RestWithASPNETUdemy.Repository;
 using Serilog;
 using System;
@@ -48,7 +47,6 @@ namespace RestWithASPNETUdemy
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); 
         }
