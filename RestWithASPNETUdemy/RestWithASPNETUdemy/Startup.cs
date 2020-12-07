@@ -48,6 +48,7 @@ namespace RestWithASPNETUdemy
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+            services.AddScoped<IBookRepository, BookRepositoryImplementation>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
